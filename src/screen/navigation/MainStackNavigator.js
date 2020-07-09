@@ -2,9 +2,11 @@ import * as React from "react";
 import { NavigationContainer, D } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
+
 // import Home from "../Home";
 // import Detail from '../Detail'
 import SearchScreen from "../SearchScreen";
+import ResultsShowScreen from '../ResultsShowScreen'
 
 const Stack = createStackNavigator();
 
@@ -24,6 +26,7 @@ function MainStackNavigator() {
     <NavigationContainer theme={MyTheme}>
       <Stack.Navigator initialRouteName="SearchScreen">
         <Stack.Screen name="SearchScreen" component={SearchScreen} />
+        <Stack.Screen name="ResultsShow" component={ResultsShowScreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
